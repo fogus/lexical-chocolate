@@ -1,4 +1,4 @@
-(ns lexical-chocolate.core-test
+(ns fogus.lexical-chocolate.core-test
   (:use clojure.test
         fogus.lexical.chocolate))
 
