@@ -1,10 +1,24 @@
 # lexical-chocolate
 
-TODO
+Provides utilities for building lexical contours.
 
-## Usage
+## Using
 
-TODO
+**deps.edn**
+
+    me.fogus/lexical-chocolate {:mvn/version "0.0.3"}
+
+**Lein**
+
+    [me.fogus/lexical-chocolate "0.0.3"]
+
+**Maven**
+
+	<dependency>
+	  <groupId>me.fogus</groupId>
+	  <artifactId>lexical-chocolate</artifactId>
+	  <version>0.0.3</version>
+	</dependency>
 
 ## License
 

@@ -1,4 +1,5 @@
-(ns fogus.lexical.chocolate.destructure)
+(ns fogus.lexical.chocolate.destructure
+  "WiP -- DO NOT USE")
 
 (declare process-bind-pair)
 
@@ -44,7 +45,7 @@
   (cond
     (symbol? b) (-> bvec (conj b) (conj v))
     (vector? b) (pvec bvec b v)
-    (map? b) (throw (new Exception. "Map bindings not currently supported."))
+    (map? b) (throw (new Exception "Map bindings not currently supported."))
     :else (throw (new Exception (str "Unsupported binding form: " b)))))
 
 (defn process-entry [bvec b] (process-bind-pair bvec (first b) (second b)))

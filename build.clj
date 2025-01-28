@@ -1,8 +1,9 @@
 (ns build
   (:require [clojure.tools.build.api :as b]))
 
-(def lib 'fogus/lexical-chocolate)
-(def version (format "0.0.%s" (b/git-count-revs nil)))
+(def lib 'me.fogus/lexical-chocolate)
+;;(def version (format "0.0.%s" (b/git-count-revs nil)))
+(def version "0.0.4")
 (def class-dir "target/classes")
 (def jar-file (format "target/%s.jar" (name lib)))
 
