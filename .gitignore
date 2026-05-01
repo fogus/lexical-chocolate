@@ -8,3 +8,5 @@
 .lein-failures
 .lein-plugins
 .cpcache
+_
+.nrepl-port

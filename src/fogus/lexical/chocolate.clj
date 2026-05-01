@@ -60,3 +60,14 @@
   [binds form]
   `(let [~binds ~form]
      (context)))
+
+(defmacro lloop
+  "Labeled loop. label-name is bound as a callable function within body, allowing recur-like
+  calls from any position. Use of lloop will accumulate stack frames. so it is not intended
+  as a replacement for loop."
+  [label-name bindings & body]
+  (let [pairs       (partition 2 bindings)
+        names       (vec (map first pairs))
+        init-values (map second pairs)]
+    `(letfn [(~label-name ~names ~@body)]
+       (~label-name ~@init-values))))
