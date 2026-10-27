@@ -9,4 +9,6 @@
 .lein-plugins
 .cpcache
 _
-.nrepl-port
+.nrepl-port.lsp
+.clj-kondo
+.lsp

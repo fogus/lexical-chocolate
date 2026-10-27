@@ -56,10 +56,18 @@
     ;=> {c [1 2],
          vec__2336 [1 2],
          a 1,
-         b 2}"
-  [binds form]
-  `(let [~binds ~form]
-     (context)))
+         b 2}
+
+   Passing only the form returns a function that takes a collection and returns the
+   same lexical context map as described above."
+  ([binds]
+    `(with-meta (fn [data#]
+                  (let [~binds data#]
+                    (context)))
+        {::bindings '~binds}))
+  ([binds form]
+    `(let [~binds ~form]
+       (context))))
 
 (defmacro lloop
   "Labeled loop. label-name is bound as a callable function within body, allowing recur-like

@@ -48,7 +48,9 @@
     '#{1 [3 4 5 6 7 8] [1 2 [3 4 5 6 7 8]] (5 6 7 8) 3 33 2 4}
     (set (vals
           (destro [a b [c d & e] :as Z]
-                  [1 2 [3 4 5 6 7 8]])))))
+                  [1 2 [3 4 5 6 7 8]]))))
+  (is (= '#{1 [3 4 5 6 7 8] [1 2 [3 4 5 6 7 8]] (5 6 7 8) 3 33 2 4}
+         (set (vals ((destro [a b [c d & e] :as Z]) [1 2 [3 4 5 6 7 8]]))))))
 
 (deftest lloop-test
   (testing "tail-position call, single binding — sanity check"

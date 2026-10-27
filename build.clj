@@ -3,7 +3,7 @@
             [deps-deploy.deps-deploy :as dd]))
 
 (def lib 'me.fogus/lexical-chocolate)
-(def version "0.0.4")
+(def version "0.0.5")
 (def description "Utilities for building lexical contours.")
 (def class-dir "target/classes")
 (def jar-file (format "target/%s.jar" (name lib)))

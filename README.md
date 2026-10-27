@@ -6,18 +6,18 @@ Utilities for building lexical contours.
 
 **deps.edn**
 
-    me.fogus/lexical-chocolate {:mvn/version "0.0.4"}
+    me.fogus/lexical-chocolate {:mvn/version "0.0.5"}
 
 **Lein**
 
-    [me.fogus/lexical-chocolate "0.0.4"]
+    [me.fogus/lexical-chocolate "0.0.5"]
 
 **Maven**
 
 	<dependency>
 	  <groupId>me.fogus</groupId>
 	  <artifactId>lexical-chocolate</artifactId>
-	  <version>0.0.4</version>
+	  <version>0.0.5</version>
 	</dependency>
 
 ## License
